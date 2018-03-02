@@ -1,0 +1,46 @@
+{% extends "SanteUserBundle::layout1.html.twig" %}
+{% block body %}
+    {{ form_start(form) }}
+    <div id="content">
+    <div id="content-header">
+        <div id="breadcrumb"><a href="{{ path('sante_boutique_homepage') }}" title="Go to Home" class="tip-bottom"><i
+                        class="icon-home"></i> Home</a> <a href="{{ path('Ajoutproduit') }}">Boutique</a> <a
+                    href="#" class="current">Ajouter Categorie</a></div>
+        <h1>Ajouter Categorie</h1>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"><span class="icon"> <i class="fa fa-plus-square"></i> </span>
+                        <h5>Ajouter Categorie</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+
+                        <div class="control-group">
+
+                            <div class="controls">LIBELLE:<br>
+                                {{ form_widget(form.libelle) }}                                    </div>
+                        </div>
+                        <div class="control-group">
+
+                            <div class="controls">DESCRIPTION:<br>
+                                {{ form_widget(form.description) }}                                    </div>
+                        </div>
+
+                            <div class="form-actions">
+                                {{ form_widget(form.Save) }}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}

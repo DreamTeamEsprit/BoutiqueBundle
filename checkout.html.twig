@@ -1,0 +1,984 @@
+{% block head %}
+
+<title>Centre Santi</title>
+<!--/tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Grocery Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script>
+<!--//tags -->
+<link href="{{asset('c/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('c/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('c/css/font-awesome.css')}}" rel="stylesheet">
+<!--pop-up-box-->
+<link href="{{asset('c/css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all" />
+<!--//pop-up-box-->
+<!-- price range -->
+{#<link rel="stylesheet" type="text/css" href=""{{asset('c/css/jquery-ui1.css')}}">#}
+<!-- fonts -->
+<link href="{{asset('c///fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800')}}" rel="stylesheet">
+</head>
+
+<body>
+<!-- top-header -->
+<div class="header-most-top">
+    <p>Bienvenue A Notre Boutique Centre Santi </p>
+</div>
+<!-- //top-header -->
+
+{% endblock %}
+{% block body %}
+    <!-- header-bot-->
+    <div class="header-bot">
+        <div class="header-bot_inner_wthreeinfo_header_mid">
+            <!-- header-bot-->
+            <div class="col-md-4 logo_agile">
+                <h1>
+                    <a class="navbar-brand" href="{{ path('index') }}"><i class="fa fa-heartbeat"></i>
+                        Centre
+                        <span>SANTI</span></a>
+                </h1>
+            </div>
+            <!-- header-bot -->
+            <div class="col-md-8 header">
+                <!-- header lists -->
+
+                <!-- //header lists -->
+                <!-- search -->
+                <div class="agileits_search">
+                    <form action="#" method="post">
+                        <input name="Search" type="search" placeholder="Que peut-on faire pour vous aider aujourd'hui?" required="">
+                        <button type="submit" class="btn btn-default" aria-label="Left Align">
+                            <span class="fa fa-search" aria-hidden="true"> </span>
+                        </button>
+                    </form>
+                </div>
+                <!-- //search -->
+                <!-- cart details -->
+                <div class="top_nav_right">
+                    <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                        <form action="{{path('Checkout') }}" method="" class="last">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="display" value="1">
+                            <button class="w3view-cart" type="submit" name="submit" value="">
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- //cart details -->
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- shop locator (popup) -->
+    <!-- Button trigger modal(shop-locator) -->
+    <div id="small-dialog1" class="mfp-hide">
+        <div class="select-city">
+            <h3>Please Select Your Location</h3>
+            <select class="list_of_cities">
+
+                <option selected style="display:none;color:#eee;">Select City</option>
+                <option>Ariana</option>
+                <option>Béja</option>
+                <option>Ben Arous</option>
+                <option>Bizerte </option>
+                <option>Gabès</option>
+                <option>Gafsa</option>
+                <option>Jendouba</option>
+                <option>Kairouan</option>
+                <option>Kasserine</option>
+                <option>Kébili</option>
+                <option>Le Kef</option>
+                <option>Mahdia</option>
+                <option>La Manouba</option>
+                <option>Médenine</option>
+                <option>Monastir</option>
+                <option>Nabeul</option>
+                <option>Sfax</option>
+                <option>Sidi Bouzid</option>
+                <option>Siliana</option>
+                <option>Sousse</option>
+                <option>Tataouine</option>
+                <option>Tozeur</option>
+                <option>Tunis</option>
+                <option>Zaghouan</option>
+
+
+            </select>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //shop locator (popup) -->
+    <!-- signin Model -->
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body modal-body-sub_agile">
+                    <div class="main-mailposi">
+                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                    </div>
+                    <div class="modal_body_left modal_body_left1">
+                        <h3 class="agileinfo_sign">Sign In </h3>
+                        <p>
+                            Sign In now, Let's start your Shopping. Don't have an account?
+                            <a href="#" data-toggle="modal" data-target="#myModal2">
+                                Sign Up Now</a>
+                        </p>
+                        <form action="{{path('fos_user_security_login')}}" method="post">
+                            <div class="styled-input agile-styled-input-top">
+                                <input type="text" placeholder="User Name" name="Name" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" placeholder="Password" name="password" required="">
+                            </div>
+                            <input type="submit" value="Sign In">
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- //Modal content-->
+        </div>
+    </div>
+    <!-- //Modal1 -->
+    <!-- //signin Model -->
+    <!-- signup Model -->
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body modal-body-sub_agile">
+                    <div class="main-mailposi">
+                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                    </div>
+                    <div class="modal_body_left modal_body_left1">
+                        <h3 class="agileinfo_sign">Sign Up</h3>
+                        <p>
+                            Come join the Centre Santi! Let's set up your Account.
+                        </p>
+                        <form action="{{ path('fos_user_registration_register')}}" method="post">
+                            <div class="styled-input agile-styled-input-top">
+                                <input type="text" placeholder="Name" name="Name" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="email" placeholder="E-mail" name="Email" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" placeholder="Password" name="password" id="password1" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required="">
+                            </div>
+                            <input type="submit" value="Sign Up">
+                        </form>
+                        <p>
+                            <a href="#">By clicking register, I agree to your terms</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal content-->
+        </div>
+    </div>
+    <!-- //Modal2 -->
+    <!-- //signup Model -->
+    <!-- //header-bot -->
+    <!-- navigation -->
+    <div class="ban-top">
+        <div class="container">
+            <div class="agileits-navi_search">
+                <form action="#" method="post">
+                    <select id="agileinfo-nav_search" name="agileinfo_search" required="">
+                        <option value="">Notre Marque</option>
+                        {% for i in panier  %}
+
+                            <option value="Kitchen">{{ i.marque }}</option>
+
+                        {% endfor %}
+                    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+                </form>
+            </div>
+            <div class="top_nav_left">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                    aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav menu__list">
+                                <li class="active">
+                                    <a class="nav-stylehead" href="{{path('Boutique')}}">Acceuil
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('departements')}}">Departement</a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('evenements')}}">Evenement</a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('forum')}}">Forum</a>
+                                </li>
+
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('reclamations')}}">avis</a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('contacts')}}">Contact</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- //navigation -->
+    <!-- banner -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Big
+                            <span>Save</span>
+                        </h3>
+                        <p>Get flat
+                            <span>10%</span> Cashback</p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Healthy
+                            <span>Saving</span>
+                        </h3>
+                        <p>Get Upto
+                            <span>30%</span> Off</p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Big
+                            <span>Deal</span>
+                        </h3>
+                        <p>Get Best Offer Upto
+                            <span>20%</span>
+                        </p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item item4">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Today
+                            <span>Discount</span>
+                        </h3>
+                        <p>Get Now
+                            <span>40%</span> Discount</p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- //banner -->
+    <div class="services-breadcrumb">
+        <div class="agile_inner_breadcrumb">
+            <div class="container">
+                <ul class="w3_short">
+                    <li>
+                        <a href="{{ path('Boutique') }}">Home</a>
+                        <i>|</i>
+                    </li>
+                    <li>Checkout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //page -->
+    <!-- checkout page -->
+    <div class="privacy">
+        <div class="container">
+            <!-- tittle heading -->
+            <h3 class="tittle-w3l">Checkout
+                <span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+            </h3>
+            <!-- //tittle heading -->
+
+
+            <div class="checkout-right">
+                <h4>Your shopping cart
+                </h4>
+                <div class="table-responsive">
+                    <table class="timetable_sub">
+                        <thead>
+                        <tr>
+                            <th>SL No.</th>
+                            <th>Product</th>
+                            <th>Quantite</th>
+                            <th>prix</th>
+
+                            <th>Nom Produit</th>
+
+
+                            <th>Total</th>
+                            <th>Supprimer</th>
+                        </tr>
+                        {% set count = 0 %}
+                        {% for i in panier %}
+{% set count=count + 1 %}
+                        </thead>
+                        <tbody>
+
+                        <tr class="rem1" id="hide{{ i.id }}">
+                            <td class="invert">{{ count }}</td>
+                            <td><img src="{{ asset('images/') }}{{ i.photo }}"
+                                     style="width: 50px;height:50px"></td>
+
+
+
+                            <td>
+                            <input type="number" onchange="test()" id="{{ i.id }}" value="{{ i.quantite }}">
+                            </td>
+                            <input id="qte{{ i.id }}" type="number" value="{{ i.quantite }}">
+                            <input id="produit{{ i.id }}" type="number" hidden value="{{ i.prix }}">
+                            <td>{{ i.prix }}</td>
+
+
+                            <td class="invert">{{ i.libelle }}</td>
+
+                            <td class="invert" ><div id="total{{ i.id }}">{{ i.prix * i.quantite}}</div></td>
+                            <td class="invert">
+
+                                <a onclick="deletesession('{{ i.id }}')"><button>Supprimer</button></a>
+
+
+                            </td>
+
+                        <script>
+
+                            function deletesession(id){
+                                $.ajax({
+                                    url: "http://localhost/SanteEtBienEtre1.0/web/app_dev.php/delfrompanier/"+id,
+                                    success: function(result){
+                                        var array=result.data;
+                                        $("#hide"+id).hide()
+                                    }}
+                                );
+                            }
+
+                            function addToCart(id) {
+                                $.ajax({
+                                    url: "http://localhost/SanteEtBienEtre1.0/web/app_dev.php/setSession/"+id,
+                                    success: function(result){
+                                        var array=result.data;
+                                        for (i = 0; i < array.length; i++) {
+                                            console.log(array[i]);
+                                        }
+                                    }}
+                                );
+                            }
+
+                            function delfromCart(id,quantite) {
+                                $.ajax({
+                                    url: "http://localhost/SanteEtBienEtre1.0/web/app_dev.php/delsession/"+id+quantite,
+                                    success: function(result){
+                                        var array=result.data;
+                                        for (i = 0; i < array.length; i++) {
+                                            console.log(array[i]);
+                                        }
+                                    }}
+                                );
+                            }
+
+
+                             $("#qte{{ i.id }}").val($("#{{ i.id }}").val());
+
+
+function test(){
+
+
+                                if(parseInt($("#{{ i.id }}").val())> parseInt($("#qte{{ i.id }}").val()))
+                                {var quant = parseInt($("#qte{{ i.id }}").val())
+                                    quant = quant + 1 ;
+                                    $("#qte{{ i.id }}").val(quant)
+                                    {#totalproduit({{ produit.id }},quant)#}
+                                    var prixprod =  parseInt($("#produit{{ i.id }}").val());
+                                    var totalprod = prixprod * quant;
+                                    $("#total{{ i.id }}").html(totalprod)
+                                    addToCart({{ i.id }})
+                                   // $("#qte{{ i.id }}").val($("#{{ i.id }}").val())
+                                }
+
+                                else {
+
+                                    var quant1 = parseInt($("#qte{{ i.id }}").val())
+                                    quant1 = quant1 - 1 ;
+                                    $("#qte{{ i.id }}").val(quant1)
+                                    var prixprod =  parseInt($("#produit{{ i.id }}").val());
+                                    var totalprod = prixprod * quant1;
+                                    $("#total{{ i.id }}").html(totalprod)
+                                    delfromCart({{ i.id }},quant1);
+                                   // $("#qte{{ i.id }}").val($("#{{ i.id }}").val())
+
+                                }
+    if(parseInt($("#qte{{ i.id }}").val()) == 0)
+    {
+        $("#hide{{ i.id }}").hide();
+    }
+
+
+}
+
+                        </script>
+                        {% endfor %}
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="checkout-left">
+                <div class="address_form_agile">
+                    <h4>Add a new Details</h4>
+                    <form action="{{ path('payment') }}" method="post" class="creditly-card-form agileinfo_form">
+                        <div class="creditly-wrapper wthree, w3_agileits_wrapper">
+                            <div class="information-wrapper">
+                                <div class="first-row">
+                                    <div class="controls">
+                                        <input class="billing-address-name" type="text" name="name" placeholder="Full Name" required="">
+                                    </div>
+                                    <div class="w3_agileits_card_number_grids">
+                                        <div class="w3_agileits_card_number_grid_left">
+                                            <div class="controls">
+                                                <input type="text" placeholder="Mobile Number" name="number" required="">
+                                            </div>
+                                        </div>
+                                        <div class="w3_agileits_card_number_grid_right">
+                                            <div class="controls">
+                                                <input type="text" placeholder="Landmark" name="landmark" required="">
+                                            </div>
+                                        </div>
+                                        <div class="clear"> </div>
+                                    </div>
+                                    <div class="controls">
+                                        <input type="text" placeholder="Town/City" name="city" required="">
+                                    </div>
+                                    <div class="controls">
+                                        <select class="option-w3ls">
+                                            <option>Select Address type</option>
+                                            <option>Office</option>
+                                            <option>Home</option>
+                                            <option>Commercial</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <button class="submit check_out">Delivery to this Address</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="checkout-right-basket">
+                        <a href="{{ path('payment') }}">Make a Payment
+                            <span class="fa fa-hand-o-right" aria-hidden="true"></span>
+                        </a>
+
+
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //checkout page -->
+    <!-- newsletter -->
+
+    <!-- //newsletter -->
+    <!-- footer -->
+    <div class="footer-top">
+        <div class="container-fluid">
+            <div class="col-xs-8 agile-leftmk">
+                <h2>Get your Groceries delivered from local stores</h2>
+                <p>Free Delivery on your first order!</p>
+                <form action="{{ path('delivery') }}" method="post">
+                    <input type="email" placeholder="E-mail" name="email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="newsform-w3l">
+                    <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="col-xs-4 w3l-rightmk">
+                <img src="{{ asset('c/images/tab3.png') }}" alt=" ">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //newsletter -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <!-- footer first section -->
+            <p class="footer-main">
+                <span>"SHOP PARAMEDICAL"</span> Le bien-être est un état lié à différents facteurs considérés de façon séparée
+                ou conjointe : la santé, la réussite sociale ou économique, le plaisir,
+                la réalisation de soi, l'harmonie avec soi même et avec les autres.
+            </p>
+            <!-- //footer first section -->
+            <!-- footer second section -->
+            <div class="w3l-grids-footer">
+                <div class="col-xs-4 offer-footer">
+                    <div class="col-xs-4 icon-fot">
+                        <span class="fa fa-map-marker" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-8 text-form-footer">
+                        <h3>Track Your Order</h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-xs-4 offer-footer">
+                    <div class="col-xs-4 icon-fot">
+                        <span class="fa fa-refresh" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-8 text-form-footer">
+                        <h3>Free & Easy Returns</h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-xs-4 offer-footer">
+                    <div class="col-xs-4 icon-fot">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-8 text-form-footer">
+                        <h3>Online cancellation </h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- //footer second section -->
+            <!-- footer third section -->
+            <div class="footer-info w3-agileits-info">
+                <!-- footer categories -->
+
+                <!-- //footer categories -->
+                <!-- quick links -->
+                <center>
+                    <div class="col-sm-5 address-right">
+                        <div class="col-xs-6 footer-grids">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>
+                                    <a href="{{ asset('c/about.html') }}">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('c/contact.html') }}">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('c/help.html') }}">Help</a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('c/faqs.html') }}">Faqs</a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('c/terms.html') }}">Terms of use</a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('c/privacy.html') }}">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 footer-grids">
+                            <h3>Get in Touch</h3>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker"></i> ESPRIT
+                                </li>
+                                <li>
+                                    <i class="fa fa-mobile"></i> +216 25 315 460
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i> +216 71 000 001
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o"></i>
+                                    <a href="mailto:example@mail.com"> marwen.benalayet@esprit.tn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //quick links -->
+                    <!-- social icons -->
+                    <div class="col-sm-2 footer-grids  w3l-socialmk">
+                        <h3>Follow Us on</h3>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <a class="icon fb" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon tw" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon gp" href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="agileits_app-devices">
+                            <h5>Download the App</h5>
+                            <a href="#">
+                                <img src="{{ asset('c/images/1.png') }}" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{{ asset('c/images/2.png') }}" alt="">
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div></center>
+                <!-- //social icons -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- //footer third section -->
+            <!-- footer fourth section (text) -->
+            <div class="agile-sometext">
+
+                <div class="sub-some">
+                    <h5>Shop online with the best deals & offers</h5>
+                    <p>Now Get Upto 40% Off On Everyday Essential Products Shown On The Offer Page. The range includes
+                        Grocery, Personal Care,
+                        Baby Care, Pet Supplies, Healthcare and Other Daily Need Products. Discount May Vary From
+                        Product To
+                        Product.</p>
+                </div>
+                <!-- brands -->
+
+                <!-- //brands -->
+                <!-- payment -->
+                <div class="sub-some child-momu">
+                    <h5>Payment Method</h5>
+                    <ul>
+                        <li>
+                            <img src="{{ asset('c/images/pay2.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay5.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay1.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay4.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay6.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay3.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay7.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay8.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay9.png') }}" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!-- //payment -->
+            </div>
+            <!-- //footer fourth section (text) -->
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="copy-right">
+        <div class="container">
+            <p>© 2018 Shop Paramedical. All rights reserved | Design by
+                <a href="http://w3layouts.com"> W3layouts.</a>
+            </p>
+        </div>
+    </div>
+    <!-- //copyright -->
+
+    <!-- js-files -->
+    <!-- jquery -->
+    <script src="{{ asset('c/js/jquery-2.1.4.min.js') }}"></script>
+    <!-- //jquery -->
+
+    {#<!-- popup modal (for signin & signup)-->#}
+    {#<script src="{{ asset('c/js/jquery.magnific-popup.js') }}"></script>#}
+    {#<script>#}
+        {#$(document).ready(function () {#}
+            {#$('.popup-with-zoom-anim').magnificPopup({#}
+                {#type: 'inline',#}
+                {#fixedContentPos: false,#}
+                {#fixedBgPos: true,#}
+                {#overflowY: 'auto',#}
+                {#closeBtnInside: true,#}
+                {#preloader: false,#}
+                {#midClick: true,#}
+                {#removalDelay: 300,#}
+                {#mainClass: 'my-mfp-zoom-in'#}
+            {#});#}
+
+        {#});#}
+    {#</script>#}
+    {#<!-- Large modal -->#}
+    {#<!-- <script>#}
+        {#$('#').modal('show');#}
+    {#</script> -->#}
+    {#<!-- //popup modal (for signin & signup)-->#}
+
+    {#<!-- cart-js -->#}
+    {#<script src="{{ asset('c/js/minicart.js') }}"></script>#}
+    {#<script>#}
+        {#paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js#}
+
+        {#paypalm.minicartk.cart.on('checkout', function (evt) {#}
+            {#var items = this.items(),#}
+                    {#len = items.length,#}
+                    {#total = 0,#}
+                    {#i;#}
+
+            {#// Count the number of each item in the cart#}
+            {#for (i = 0; i < len; i++) {#}
+                {#total += items[i].get('quantity');#}
+            {#}#}
+
+            {#if (total < 3) {#}
+                {#alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');#}
+                {#evt.preventDefault();#}
+            {#}#}
+        {#});#}
+    {#</script>#}
+    {#<!-- //cart-js -->#}
+
+    {#<!-- price range (top products) -->#}
+    {#<script src="{{ asset('c/js/jquery-ui.js') }}"></script>#}
+    {#<script>#}
+        {#//<![CDATA[#}
+        {#$(window).load(function () {#}
+            {#$("#slider-range").slider({#}
+                {#range: true,#}
+                {#min: 0,#}
+                {#max: 9000,#}
+                {#values: [50, 6000],#}
+                {#slide: function (event, ui) {#}
+                    {#$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);#}
+                {#}#}
+            {#});#}
+            {#$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));#}
+
+        {#}); //]]>#}
+    {#</script>#}
+    {#<!-- //price range (top products) -->#}
+
+    {#<!-- flexisel (for special offers) -->#}
+    {#<script src="{{ asset('c/js/jquery.flexisel.js') }}"></script>#}
+    {#<script>#}
+        {#$(window).load(function () {#}
+            {#$("#flexiselDemo1").flexisel({#}
+                {#visibleItems: 3,#}
+                {#animationSpeed: 1000,#}
+                {#autoPlay: true,#}
+                {#autoPlaySpeed: 3000,#}
+                {#pauseOnHover: true,#}
+                {#enableResponsiveBreakpoints: true,#}
+                {#responsiveBreakpoints: {#}
+                    {#portrait: {#}
+                        {#changePoint: 480,#}
+                        {#visibleItems: 1#}
+                    {#},#}
+                    {#landscape: {#}
+                        {#changePoint: 640,#}
+                        {#visibleItems: 2#}
+                    {#},#}
+                    {#tablet: {#}
+                        {#changePoint: 768,#}
+                        {#visibleItems: 2#}
+                    {#}#}
+                {#}#}
+            {#});#}
+
+        {#});#}
+    {#</script>#}
+    {#<!-- //flexisel (for special offers) -->#}
+
+    {#<!-- password-script -->#}
+    {#<script>#}
+        {#window.onload = function () {#}
+            {#document.getElementById("password1").onchange = validatePassword;#}
+            {#document.getElementById("password2").onchange = validatePassword;#}
+        {#}#}
+
+        {#function validatePassword() {#}
+            {#var pass2 = document.getElementById("password2").value;#}
+            {#var pass1 = document.getElementById("password1").value;#}
+            {#if (pass1 != pass2)#}
+                {#document.getElementById("password2").setCustomValidity("Passwords Don't Match");#}
+            {#else#}
+                {#document.getElementById("password2").setCustomValidity('');#}
+            {#//empty string means no validation error#}
+        {#}#}
+    {#</script>#}
+    {#<!-- //password-script -->#}
+
+    {#<!-- smoothscroll -->#}
+    {#<script src="{{ asset('c/js/SmoothScroll.min.js') }}"></script>#}
+    {#<!-- //smoothscroll -->#}
+
+    {#<!-- start-smooth-scrolling -->#}
+    {#<script src="{{ asset('c/js/move-top.js') }}"></script>#}
+    {#<script src="{{ asset('c/js/easing.js') }}"></script>#}
+    {#<script>#}
+        {#jQuery(document).ready(function ($) {#}
+            {#$(".scroll").click(function (event) {#}
+                {#event.preventDefault();#}
+
+                {#$('html,body').animate({#}
+                    {#scrollTop: $(this.hash).offset().top#}
+                {#}, 1000);#}
+            {#});#}
+        {#});#}
+    {#</script>#}
+    {#<!-- //end-smooth-scrolling -->#}
+
+    {#<!-- smooth-scrolling-of-move-up -->#}
+    {#<script>#}
+        {#$(document).ready(function () {#}
+            {#/*#}
+             {#var defaults = {#}
+             {#containerID: 'toTop', // fading element id#}
+             {#containerHoverID: 'toTopHover', // fading element hover id#}
+             {#scrollSpeed: 1200,#}
+             {#easingType: 'linear'#}
+             {#};#}
+             {#*/#}
+            {#$().UItoTop({#}
+                {#easingType: 'easeOutQuart'#}
+            {#});#}
+
+        {#});#}
+    {#</script>#}
+    {#<!-- //smooth-scrolling-of-move-up -->#}
+
+    {#<!-- for bootstrap working -->#}
+    {#<script src="{{ asset('c/js/bootstrap.js') }}"></script>#}
+    {#<!-- //for bootstrap working -->#}
+    {#<!-- //js-files -->#}
+
+    {#<script>#}
+        {#function addToCart(id) {#}
+            {#$.ajax({#}
+                {#url: "http://localhost/SanteEtBienEtre1.1/web/app_dev.php/setSession/"+id,#}
+                {#success: function(result){#}
+                    {#var array=result.data;#}
+                    {#for (i = 0; i < array.length; i++) {#}
+                        {#console.log(array[i]);#}
+                    {#}#}
+                {#}}#}
+            {#);#}
+        {#}#}
+    {#</script>#}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

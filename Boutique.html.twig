@@ -1,0 +1,1093 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+<script src="{{ asset('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js') }}"></script>
+<script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+<title>Centre Santi</title>
+<!--/tags -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Grocery Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script>
+<!--//tags -->
+<link href="{{asset('c/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('c/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('c/css/font-awesome.css')}}" rel="stylesheet">
+<!--pop-up-box-->
+<link href="{{asset('c/css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all" />
+<!--//pop-up-box-->
+<!-- price range -->
+<link rel="stylesheet" type="text/css" href=""{{asset('c/css/jquery-ui1.css')}}">
+<!-- fonts -->
+<link href="{{asset('c///fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800')}}" rel="stylesheet">
+</head>
+
+<body>
+<!-- top-header -->
+<div class="header-most-top">
+    <p>Bienvenue A Notre Boutique Centre Santi </p>
+</div>
+<!-- //top-header -->
+
+{% endblock %}
+{% block body %}
+    <!-- header-bot-->
+    <div class="header-bot">
+        <div class="header-bot_inner_wthreeinfo_header_mid">
+            <!-- header-bot-->
+            <div class="col-md-4 logo_agile">
+                <h1>
+                    <a class="navbar-brand" href="{{ path('index') }}"><i class="fa fa-heartbeat"></i>
+                        Centre
+                        <span>SANTI</span></a>
+                </h1>
+            </div>
+            <!-- header-bot -->
+            <div class="col-md-8 header">
+                <!-- header lists -->
+                {#  <ul>
+                      <li>
+                          <a class="play-icon popup-with-zoom-anim" href="#small-dialog1">
+                              <span class="fa fa-map-marker" aria-hidden="true"></span> Localisateur de magasin</a>
+                      </li>
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#myModal1">
+                              <span class="fa fa-truck" aria-hidden="true"></span>Suivi de commande</a>
+                      </li>
+                      <li>
+                          <span class="fa fa-phone" aria-hidden="true"></span> +216 25 315 460
+                      </li>
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#myModal1">
+                              <span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
+                      </li>
+                      <li>
+                          <a href="#" data-toggle="modal" data-target="#myModal2">
+                              <span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
+                      </li>
+                  </ul>
+                  <!-- //header lists -->#}
+                <!-- search -->
+                <div class="agileits_search">
+                    <form action="#" method="post">
+                        <input name="Search" type="search" placeholder="Que peut-on faire pour vous aider aujourd'hui?" required="">
+                        <button type="submit" class="btn btn-default" aria-label="Left Align">
+                            <span class="fa fa-search" aria-hidden="true"> </span>
+                        </button>
+                    </form>
+                </div>
+                <!-- //search -->
+                <!-- cart details -->
+                <div class="top_nav_right">
+                    <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                        <form action="" method="" class="last">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="display" value="1">
+                            <button class="w3view-cart" type="submit" name="submit" value="">
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- //cart details -->
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- shop locator (popup) -->
+    <!-- Button trigger modal(shop-locator) -->
+    <div id="small-dialog1" class="mfp-hide">
+        <div class="select-city">
+            <h3>Please Select Your Location</h3>
+            <select class="list_of_cities">
+
+                <option selected style="display:none;color:#eee;">Select City</option>
+                <option>Ariana</option>
+                <option>Béja</option>
+                <option>Ben Arous</option>
+                <option>Bizerte </option>
+                <option>Gabès</option>
+                <option>Gafsa</option>
+                <option>Jendouba</option>
+                <option>Kairouan</option>
+                <option>Kasserine</option>
+                <option>Kébili</option>
+                <option>Le Kef</option>
+                <option>Mahdia</option>
+                <option>La Manouba</option>
+                <option>Médenine</option>
+                <option>Monastir</option>
+                <option>Nabeul</option>
+                <option>Sfax</option>
+                <option>Sidi Bouzid</option>
+                <option>Siliana</option>
+                <option>Sousse</option>
+                <option>Tataouine</option>
+                <option>Tozeur</option>
+                <option>Tunis</option>
+                <option>Zaghouan</option>
+
+
+            </select>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //shop locator (popup) -->
+    <!-- signin Model -->
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body modal-body-sub_agile">
+                    <div class="main-mailposi">
+                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                    </div>
+                    <div class="modal_body_left modal_body_left1">
+                        <h3 class="agileinfo_sign">Sign In </h3>
+                        <p>
+                            Sign In now, Let's start your Shopping. Don't have an account?
+                            <a href="#" data-toggle="modal" data-target="#myModal2">
+                                Sign Up Now</a>
+                        </p>
+                        <form action="{{path('fos_user_security_login')}}" method="post">
+                            <div class="styled-input agile-styled-input-top">
+                                <input type="text" placeholder="User Name" name="Name" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" placeholder="Password" name="password" required="">
+                            </div>
+                            <input type="submit" value="Sign In">
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- //Modal content-->
+        </div>
+    </div>
+    <!-- //Modal1 -->
+    <!-- //signin Model -->
+    <!-- signup Model -->
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body modal-body-sub_agile">
+                    <div class="main-mailposi">
+                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                    </div>
+                    <div class="modal_body_left modal_body_left1">
+                        <h3 class="agileinfo_sign">Sign Up</h3>
+                        <p>
+                            Come join the Centre Santi! Let's set up your Account.
+                        </p>
+                        <form action="{{ path('fos_user_registration_register')}}" method="post">
+                            <div class="styled-input agile-styled-input-top">
+                                <input type="text" placeholder="Name" name="Name" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="email" placeholder="E-mail" name="Email" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" placeholder="Password" name="password" id="password1" required="">
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required="">
+                            </div>
+                            <input type="submit" value="Sign Up">
+                        </form>
+                        <p>
+                            <a href="#">By clicking register, I agree to your terms</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal content-->
+        </div>
+    </div>
+    <!-- //Modal2 -->
+    <!-- //signup Model -->
+    <!-- //header-bot -->
+    <!-- navigation -->
+    <div class="ban-top">
+        <div class="container">
+            <div class="agileits-navi_search">
+                <form action="#" method="post">
+                    <select id="agileinfo-nav_search" name="agileinfo_search" required="">
+                        <option value="">Notre Marque</option>
+                        {% for i in produits  %}
+
+                            <option value="Kitchen">{{ i.marque }}</option>
+
+                        {% endfor %}
+                    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+                </form>
+            </div>
+            <div class="top_nav_left">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                    aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav menu__list">
+                                <li class="active">
+                                    <a class="nav-stylehead" href="{{path('index')}}">Acceuil
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('departements')}}">Departement</a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('evenements')}}">Evenement</a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('forum')}}">Forum</a>
+                                </li>
+
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('reclamations')}}">avis</a>
+                                </li>
+                                <li class="">
+                                    <a class="nav-stylehead" href="{{path('contacts')}}">Contact</a>
+                                </li>
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false">{{ app.user.nom }} {{ app.user.prenom }} <span
+                                                    class="fa fa-angle-down"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ path('fos_user_profile_show') }}">Profile</a></li>
+                                            <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+                                        </ul>
+                                    </li>
+                                {% else %}
+                                    <li><a href="{{ path('fos_user_security_login') }}">Se connecter </a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- //navigation -->
+    <!-- banner -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Big
+                            <span>Save</span>
+                        </h3>
+                        <p>Get flat
+                            <span>10%</span> Cashback</p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Healthy
+                            <span>Saving</span>
+                        </h3>
+                        <p>Get Upto
+                            <span>30%</span> Off</p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Big
+                            <span>Deal</span>
+                        </h3>
+                        <p>Get Best Offer Upto
+                            <span>20%</span>
+                        </p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item item4">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Today
+                            <span>Discount</span>
+                        </h3>
+                        <p>Get Now
+                            <span>40%</span> Discount</p>
+                        <a class="button2" href="{{ path('Boutique') }}">Shop Now </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- //banner -->
+
+    <!-- top Products -->
+    <div class="ads-grid">
+        <div class="container">
+            <!-- tittle heading -->
+            <h3 class="tittle-w3l">Notre Produits
+                <span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+            </h3>
+            <!-- //tittle heading -->
+            <!-- product left -->
+            <div class="side-bar col-md-3">
+                <div class="search-hotel">
+                    <form action="" method="post">
+                        <h3 class="agileits-sear-head">Recherche</h3>
+
+
+                        <input type="search" placeholder="Categorie..." name="categorie">
+
+                        <input type="search" placeholder="Nom Produit..." name="libelle">
+
+
+                        <input type="number" placeholder="Prix Produit..." name="prix"
+
+
+                        <!-- price range -->
+                        <button type="submit">Rechercher</button>
+
+                    </form>
+
+                </div>
+
+
+
+
+                <div class="search-hotel">
+                        <h3 class="agileits-sear-head">Trier Par</h3>
+
+
+
+
+                       <a href="{{ path('moinscher') }}"><button>Le Moins Cher</button></a><br>
+                       <a href="{{ path('pluscher') }}"><button>Le plus  Cher</button></a>
+
+
+
+                </div>
+                <!-- //price range -->
+                <!-- food preference -->
+
+                <!-- //cuisine -->
+                <!-- deals -->
+                <div class="deal-leftmk left-side">
+                    <h3 class="agileits-sear-head">Special Produits </h3>
+                    {% for i in produits %}
+                        {% if  i.remise > 0 and i.remise < 50 %}
+
+
+                            <div class="special-sec1">
+
+                                <div class="col-xs-4 img-deals">
+                                    <img style="width: 70px;height: 100px" src="{{ asset('images/') }}{{
+
+                                    i.photo }}" alt="">
+                                </div>
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="{{ path('quikview',{'id':i.id}) }}" class="link-product-add-cart">Quick
+                                            View</a>
+                                    </div>
+                                </div>
+                                <span class="product-new-top">New</span>
+                            </div>
+                            <div class="item-info-product ">
+                                <h4>
+                                    <a href="{{ path('quikview',{'id':i.id}) }}">{{ i.libelle }}</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <span class="item_price">{{ i.prix }}DT<br></span>
+
+                                </div>
+                                <div class="info-product-price">
+                                    <span class="item_price">Remise: {{ i.remise }}%<br></span>
+
+                                </div>
+                                <span class="item_price">
+                                                {% for rate in rating %}
+                                                    {% if i.id == rate.produit %}
+                                                        {{ rate.1 | rating(5, "fa-1x")  }}
+                                                    {% endif %}
+
+
+                                                {% endfor %}
+                                            </span>
+                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                                    <form action="" method="">
+                                        <fieldset>
+                                            <input type="hidden" name="cmd" value="_cart" />
+                                            <input type="hidden" name="add" value="1" />
+                                            <input type="hidden" name="business" value=" " />
+                                            <input type="hidden" name="item_name" value="{{ i.libelle }}" />
+                                            <input type="hidden" name="amount" value="{{ i.prix }}" />
+                                            <input type="hidden" name="discount_amount" value="" />
+                                            <input type="hidden" name="currency_code" value="" />
+                                            <input type="hidden" name="return" value=" " />
+                                            <input type="hidden" name="cancel_return" value=" " />
+                                            {% if i.quantiteDispo==0 %}
+                                                <a >Quantite épuisé</a>
+                                            {% else %}
+                                                <a  onclick="addToCart('{{ i.id }}')" ><button>Acheter</button></a>
+                                            {% endif %}
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+
+                </div>
+                <!-- //deals -->
+            </div>
+            <!-- //product left -->
+            <!-- product right -->
+            <div class="agileinfo-ads-display col-md-9">
+                <div class="wrapper">
+                    <!-- first section (nuts) -->
+
+
+
+
+
+
+                    <div class="product-sec1">
+                        <h3 class="heading-tittle">Nouveaux Produits </h3>
+                        {% for i in produits %}
+
+                            {% if  i.remise == 0    %}
+
+
+
+                                <div class="col-md-4 product-men">
+                                    <div class="men-pro-item simpleCart_shelfItem">
+                                        <div class="men-thumb-item">
+                                            <img style="width: 120px;height: 160px" src="{{ asset('images/') }}{{ i.photo }}" alt="">
+                                            <div class="men-cart-pro">
+                                                <div class="inner-men-cart-pro">
+                                                    <a href="{{ path('quikview',{'id':i.id}) }}" class="link-product-add-cart">Quick
+                                                        View</a>
+                                                </div>
+                                            </div>
+                                            <span class="product-new-top">New</span>
+                                        </div>
+                                        <div class="item-info-product ">
+                                            <h4>
+                                                <a href="{{ path('quikview',{'id':i.id}) }}">{{ i.libelle }}</a>
+                                            </h4>
+                                            <div class="info-product-price">
+                                                <span class="item_price">{{ i.prix }}DT<br></span>
+
+                                            </div>
+                                            <span class="item_price">
+                                                {% for rate in rating %}
+                                                    {% if i.id == rate.produit %}
+                                                        {{ rate.1 | rating(5, "fa-1x")  }}
+                                                    {% endif %}
+
+
+                                                {% endfor %}
+                                            </span>
+                                            <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                                                {% if i.quantiteDispo==0 %}
+                                                <a >Quantite épuisé</a>
+                                                <button>Contacter nous</button>
+                                                {% else %}
+                                                <form action="{{path('setSession',{'id':i.id}) }}" method="">
+                                                    <fieldset>
+                                                        <input type="hidden" name="cmd" value="_cart" />
+                                                        <input type="hidden" name="add" value="1" />
+                                                        <input type="hidden" name="business" value=" " />
+                                                        <input type="hidden" name="item_name" value="{{ i.libelle }}" />
+                                                        <input type="hidden" name="amount" value="{{ i.prix }}" />
+                                                        <input type="hidden" name="discount_amount" value="" />
+                                                        <input type="hidden" name="currency_code" value="" />
+                                                        <input type="hidden" name="return" value=" " />
+                                                        <input type="hidden" name="cancel_return" value=" " />
+
+                                                            <a  onclick="addToCart('{{ i.id }}')" ><button> Acheter</button></a>
+                                                        {% endif %}
+
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <center>                    <div class="naigation">{{ knp_pagination_render(produits) }}</div>
+                    </center>
+                    {#   <b>   <center> <a  href="{{ path('afficherPanier')}}" ><button>Afficher Mon
+
+                                       Panier</button> </a></center></b>#}
+
+                    <!-- //third section (oils) -->
+                    <!-- fourth section (noodles) -->
+
+                </div>
+                <!-- //fourth section (noodles) -->
+            </div>
+        </div>
+        <!-- //product right -->
+
+
+    <!-- //top products -->
+    <!-- //top products -->
+    <!-- special offers -->
+    <div class="featured-section" id="projects">
+        <div class="container">
+            <!-- tittle heading -->
+            <h3 class="tittle-w3l">Special Offers
+                <span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+            </h3>
+            <!-- //tittle heading -->
+            <div class="content-bottom-in">
+                <ul id="flexiselDemo1">
+                    {% for i in produits %}
+                        {% if i.remise > 50  %}
+                            <li>
+                                <div class="w3l-specilamk">
+                                    <div class="speioffer-agile">
+                                        <a href="{{ path('quikview',{'id':i.id}) }}">
+                                            <img style="width: 120px;height: 160px" src="{{ asset('images/') }}{{ i.photo }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="product-name-w3l">
+                                        <h4>
+                                            <a href="{{ path('quikview',{'id':i.id}) }}">{{ i.libelle }}</a>
+                                        </h4>
+                                        <div class="w3l-pricehkj">
+                                            <h6>{{ i.prix }} DT</h6>
+                                            <p>Gagner Plus Que 50%</p>
+                                        </div>
+                                       <p> <span class="item_price">
+                                                {% for rate in rating %}
+                                                    {% if i.id == rate.produit %}
+                                                        {{ rate.1 | rating(5, "fa-1x")  }}
+                                                    {% endif %}
+
+
+                                                {% endfor %}
+                                            </span></p>
+                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                                            <form action="" method="">
+                                                <fieldset>
+                                                    <input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="business" value=" " />
+                                                    <input type="hidden" name="item_name" value="{{ i.libelle }}" />
+                                                    <input type="hidden" name="amount" value="{{ i.prix }}" />
+                                                    <input type="hidden" name="discount_amount" value="" />
+                                                    <input type="hidden" name="currency_code" value="" />
+                                                    <input type="hidden" name="return" value=" " />
+                                                    <input type="hidden" name="cancel_return" value=" " />
+                                                    {% if i.quantiteDispo==0 %}
+                                                        <a >Quantite épuisé</a>
+                                                    {% else %}
+
+                                                        <a  onclick="addToCart('{{ i.id }}')" ><button style="width: 280px;height: 30px">Acheter</button></a>
+                                                    {% endif %}
+
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endif %}
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- //special offers -->
+    <!-- newsletter -->
+    <div class="footer-top">
+        <div class="container-fluid">
+            <div class="col-xs-8 agile-leftmk">
+                <h2>Get your Groceries delivered from local stores</h2>
+                <p>Free Delivery on your first order!</p>
+                <form action="{{ path('delivery') }}" method="post">
+                    <input type="email" placeholder="E-mail" name="email" required="">
+                    <input type="submit" value="Subscribe">
+                </form>
+                <div class="newsform-w3l">
+                    <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="col-xs-4 w3l-rightmk">
+                <img src="{{ asset('c/images/tab3.png') }}" alt=" ">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //newsletter -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <!-- footer first section -->
+            <p class="footer-main">
+                <span>"SHOP PARAMEDICAL"</span> Le bien-être est un état lié à différents facteurs considérés de façon séparée
+                ou conjointe : la santé, la réussite sociale ou économique, le plaisir,
+                la réalisation de soi, l'harmonie avec soi même et avec les autres.
+            </p>
+            <!-- //footer first section -->
+            <!-- footer second section -->
+            <div class="w3l-grids-footer">
+                <div class="col-xs-4 offer-footer">
+                    <div class="col-xs-4 icon-fot">
+                        <span class="fa fa-map-marker" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-8 text-form-footer">
+                        <h3>Track Your Order</h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-xs-4 offer-footer">
+                    <div class="col-xs-4 icon-fot">
+                        <span class="fa fa-refresh" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-8 text-form-footer">
+                        <h3>Free & Easy Returns</h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-xs-4 offer-footer">
+                    <div class="col-xs-4 icon-fot">
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-xs-8 text-form-footer">
+                        <h3>Online cancellation </h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- //footer second section -->
+            <!-- footer third section -->
+            <div class="footer-info w3-agileits-info">
+                <!-- footer categories -->
+
+                <!-- //footer categories -->
+                <!-- quick links -->
+                <center>
+                    <div class="col-sm-5 address-right">
+                        <div class="col-xs-6 footer-grids">
+                            <h3>Quick Links</h3>
+
+                        </div>
+                        <div class="col-xs-6 footer-grids">
+                            <h3>Get in Touch</h3>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker"></i> ESPRIT
+                                </li>
+                                <li>
+                                    <i class="fa fa-mobile"></i> +216 25 315 460
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i> +216 71 000 001
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o"></i>
+                                    <a href="mailto:example@mail.com"> marwen.benalayet@esprit.tn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //quick links -->
+                    <!-- social icons -->
+                    <div class="col-sm-2 footer-grids  w3l-socialmk">
+                        <h3>Follow Us on</h3>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <a class="icon fb" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon tw" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="icon gp" href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="agileits_app-devices">
+                            <h5>Download the App</h5>
+                            <a href="#">
+                                <img src="{{ asset('c/images/1.png') }}" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{{ asset('c/images/2.png') }}" alt="">
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div></center>
+                <!-- //social icons -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- //footer third section -->
+            <!-- footer fourth section (text) -->
+            <div class="agile-sometext">
+
+                <div class="sub-some">
+                    <h5>Shop online with the best deals & offers</h5>
+                    <p>Now Get Upto 40% Off On Everyday Essential Products Shown On The Offer Page. The range includes
+                        Grocery, Personal Care,
+                        Baby Care, Pet Supplies, Healthcare and Other Daily Need Products. Discount May Vary From
+                        Product To
+                        Product.</p>
+                </div>
+                <!-- brands -->
+
+                <!-- //brands -->
+                <!-- payment -->
+                <div class="sub-some child-momu">
+                    <h5>Payment Method</h5>
+                    <ul>
+                        <li>
+                            <img src="{{ asset('c/images/pay2.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay5.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay1.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay4.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay6.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay3.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay7.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay8.png') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('c/images/pay9.png') }}" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!-- //payment -->
+            </div>
+            <!-- //footer fourth section (text) -->
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="copy-right">
+        <div class="container">
+            <p>© 2018 Shop Paramedical. All rights reserved | Design by
+                <a href="http://w3layouts.com"> W3layouts.</a>
+            </p>
+        </div>
+    </div>
+    <!-- //copyright -->
+
+    <!-- js-files -->
+    <!-- jquery -->
+    <script src="{{ asset('c/js/jquery-2.1.4.min.js') }}"></script>
+    <!-- //jquery -->
+
+    <!-- popup modal (for signin & signup)-->
+    <script src="{{ asset('c/js/jquery.magnific-popup.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+        });
+    </script>
+    <!-- Large modal -->
+    <!-- <script>
+        $('#').modal('show');
+    </script> -->
+    <!-- //popup modal (for signin & signup)-->
+
+    <!-- cart-js -->
+    <script src="{{ asset('c/js/minicart.js') }}"></script>
+    <script>
+        paypalm.minicartk.render(''); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
+
+        paypalm.minicartk.cart.on('checkout', function (evt) {
+            var items = this.items(),
+                    len = items.length,
+                    total = 0,
+                    i;
+
+            // Count the number of each item in the cart
+            for (i = 0; i < len; i++) {
+                total += items[i].get('quantity');
+            }
+
+            if (total < 3) {
+                alert('le minimum du quantite est 3. svp acheter autre produit avant de sortir' );
+                evt.preventDefault();
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+
+    <!-- price range (top products) -->
+    <script src="{{ asset('c/js/jquery-ui.js') }}"></script>
+    <script>
+        //<![CDATA[
+        $(window).load(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 9000,
+                values: [50, 6000],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+        }); //]]>
+    </script>
+    <!-- //price range (top products) -->
+
+    <!-- flexisel (for special offers) -->
+    <script src="{{ asset('c/js/jquery.flexisel.js') }}"></script>
+    <script>
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 3,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 2
+                    },
+                    tablet: {
+                        changePoint: 768,
+                        visibleItems: 2
+                    }
+                }
+            });
+
+        });
+    </script>
+    <!-- //flexisel (for special offers) -->
+
+    <!-- password-script -->
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- //password-script -->
+
+    <!-- smoothscroll -->
+    <script src="{{ asset('c/js/SmoothScroll.min.js') }}"></script>
+    <!-- //smoothscroll -->
+
+    <!-- start-smooth-scrolling -->
+    <script src="{{ asset('c/js/move-top.js') }}"></script>
+    <script src="{{ asset('c/js/easing.js') }}"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+             var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+             };
+             */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+
+    <!-- for bootstrap working -->
+    <script src="{{ asset('c/js/bootstrap.js') }}"></script>
+    <!-- //for bootstrap working -->
+    <!-- //js-files -->
+
+    <script>
+        function addToCart(id) {
+            $.ajax({
+                url: "http://localhost/SanteEtBienEtre1.0/web/app_dev.php/setSession/"+id,
+                success: function(result){
+                    var array=result.data;
+                    for (i = 0; i < array.length; i++) {
+                        console.log(array[i]);
+                    }
+                }}
+            );
+        }
+    </script>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

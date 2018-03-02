@@ -1,0 +1,49 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Se
+            Connecter</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+
+                <form action="{{ path("fos_user_security_check") }}" method="post">
+                    {% if csrf_token %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+                    {% endif %}
+                    <div class="group">
+                        <label class="label" for="username">{{ 'security.login.username'|trans }}</label>
+                        <input class="input" type="text" id="username" name="_username" value="{{ last_username }}"
+                               required="required"/>
+                    </div>
+                    <div class="group">
+                        <label class="label" for="password">{{ 'security.login.password'|trans }}</label>
+                        <input class="input" type="password" id="password" name="_password" required="required"/>
+                    </div>
+                    <div class="group">
+                        <input class="check" type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+                        <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                    </div>
+                    <div class="group">
+                        <input class="button" type="submit" id="_submit" name="_submit"
+                               value="{{ 'security.login.submit'|trans }}"/>
+                    </div>
+                </form>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <a href="#forgot">Mot de passe oublié ?</a>
+                    <br>
+                    <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

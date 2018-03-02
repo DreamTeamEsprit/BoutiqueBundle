@@ -1,0 +1,38 @@
+<h1 aria-flowto="left">CENTRE SANTI</h1>             <h2 aria-flowto="right">REFERENE FACTURE : #07199262</h2><br>
+
+<center><h1>Votre Facture</h1>
+</center><br><br><br><br><br>
+{% set counter = 0 %}
+{% for i in panier %}
+
+
+    {% set counter = counter + i.prix*i.quantite %}
+
+    <center>
+******************************************************<br>
+        NOM PRODUIT:{{ i.libelle }}<br>
+        PRIX PRODUIT :{{ i.prix }}DT<br>
+        Quantite :{{ i.quantite }}<br>
+        <br><br><br>
+    </center>
+
+{% endfor %}
+
+<center><h1>TOTAL :{{ counter }} DT</h1></center>
+
+<center><h1>Merci Pour Votre Visite</h1>
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+

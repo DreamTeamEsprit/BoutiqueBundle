@@ -1,0 +1,81 @@
+{% extends "SanteUserBundle::layout1.html.twig" %}
+
+{% block body %}
+
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb"><a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a
+                        href="{{ path('listeProduit') }}" class="current">List Des Produits</a></div>
+            <h1>Gestion Produit</h1>
+        </div>
+        <div class="container-fluid">
+            <hr>
+            <div class="row-fluid">
+                <div class="span12">
+                    <a class="btn btn-inverse pull-right" href="{{ path('Ajoutproduit') }}">Ajouter <i
+                                class="fa fa-plus-square"
+                                aria-hidden="true"></i></a>
+                    {% for i in fedi %}
+                        <button style="background-color: red">Attention il vous reste {{ i.quantiteDispo  }} pieces du produit {{ i.libelle }}</button>
+                    {% endfor %}
+                    <div class="widget-box">
+                        <div class="widget-content nopadding">
+
+                            <table class="table table-bordered data-table">
+                                <thead>
+                                <tr>
+
+                                    <th style="color: #0e90d2">Id</th>
+                                    <th style="color: #0e90d2">libelle</th>
+                                    <th style="color: #0e90d2">description</th>
+                                    <th style="color: #0e90d2"> prix</th>
+                                    <th style="color: #0e90d2"> remise</th>
+                                    <th style="color: #0e90d2"> quantiteDispo</th>
+
+                                    <th style="color: #0e90d2"> Marque</th>
+                                    <th style="color: #0e90d2"> Categorie</th>
+                                    <th style="color: #0e90d2"> datefabication</th>
+                                    <th style="color: #0e90d2"> photo</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                {% for pr in ev %}
+                                    <tr>
+
+                                        <td>{{ pr.id }}</td>
+                                        <td>{{ pr.libelle }}</td>
+                                        <td>{{ pr.description }}</td>
+                                        <td>{{ pr.prix }}</td>
+
+                                        <td>{{ pr.remise }}</td>
+                                        <td>{{ pr.quantiteDispo }}</td>
+
+
+                                        <td>{{ pr.marque }} </td>
+                                        <td>{{ pr.categorie.libelle }} </td>
+                                        <td>{{ pr.dateFabrication | date }}</td>
+                                        <td><img src="{{ asset('images/') }}{{ pr.photo }}"
+                                                 style="width: 50px;height:50px"></td>
+
+                                        <td>
+                                            <a href="{{ path('modifierProduit',{'id':pr.id}) }}"
+                                               style="color: #428bca;">
+                                                <i class="fa fa-edit fa-2x"></i></a>
+
+                                            <a href="{{ path('supprimerProduit',{'id':pr.id}) }}"
+                                               style="color: red"><i class="fa fa-trash-o fa-2x"></i></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

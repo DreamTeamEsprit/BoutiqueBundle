@@ -1,0 +1,82 @@
+{% extends "SanteUserBundle::layout1.html.twig" %}
+{% block body %}
+    {{ form_start(form) }}
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb"><a href="{{ path('sante_boutique_homepage') }}" title="Go to Home" class="tip-bottom"><i
+                            class="icon-home"></i> Home</a> <a href="{{ path('Ajoutproduit') }}">Boutique</a> <a
+                        href="#" class="current">Ajouter Produit</a></div>
+            <h1>Ajouter Produit</h1>
+        </div>
+        <div class="container-fluid">
+            <hr>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="widget-box">
+                        <div class="widget-title"><span class="icon"> <i class="fa fa-plus-square"></i> </span>
+                            <h5>Ajouter Produit</h5>
+                        </div>
+                        <div class="widget-content nopadding">
+
+                            <div class="control-group">
+
+                                <div class="controls">LIBELLE:<br>
+                                    {{ form_widget(form.libelle) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+
+                                <div class="controls">DESCRIPTION:<br>
+                                    {{ form_widget(form.description) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+
+                                <div class="controls">PRIX:<br>
+                                    {{ form_widget(form.prix) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">REMISE:<br>
+                                    {{ form_widget(form.remise) }}                                    </div>
+                            </div>
+
+                                <div class="controls">QUANTITE DISPONIBLE:<br>
+                                    {{ form_widget(form.quantiteDispo) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+
+                                <div class="controls">PRIX LIVRAISON:<br>
+                                    {{ form_widget(form.prixLivraison) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+
+                                <div class="controls">MARQUE:<br>
+                                    {{ form_widget(form.marque) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+
+                                <div class="controls">CATEGORIE:<br>
+                                    {{ form_widget(form.categorie) }}                                    </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Inserer Une Image</label>
+                                <div class="controls">
+                                    {{ form_widget(form.file) }}                                    </div>
+                                <div class="controls">
+                                    <div class="control-group">
+                                        <label class="control-label">DATE DE FABRICATION</label>
+                                    {{ form_widget(form.dateFabrication) }}                                    </div>
+
+                            <div class="form-actions">
+                                {{ form_widget(form.Save) }}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}
